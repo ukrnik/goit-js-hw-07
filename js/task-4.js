@@ -4,8 +4,8 @@ registerForm.addEventListener('submit', formSubmit);
 function formSubmit(event) {
     event.preventDefault();
     const form = event.target;
-    const email = form.elements.email.value;
-    const password = form.elements.password.value;
+    const email = form.elements.email.value.trim();
+    const password = form.elements.password.value.trim();
 
     const object = {
         email,
@@ -17,6 +17,6 @@ function formSubmit(event) {
         return;
     } else {
         console.log(object);
-        form.reset;
+        form.reset();
     }
 }
